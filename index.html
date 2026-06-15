@@ -50,7 +50,9 @@ tailwind.config = {
 <body class="bg-care-bg text-care-text">
 
 <header class="sticky top-0 z-50 bg-gradient-to-r from-care-secondary to-care-primary text-white shadow-sm">
-  <div class="max-w-6xl mx-auto px-6 py-1 flex items-center justify-between">
+  <div class="max-w-6xl mx-auto px-6 py-1">
+
+    <div class="flex items-center justify-between">
 
     <!-- Logo -->
     <a href="index.html" class="flex items-center space-x-2 hover:opacity-90 transition">
@@ -60,8 +62,8 @@ tailwind.config = {
       </span>
     </a>
 
-    <!-- Navigation -->
-    <nav class="hidden md:flex items-center space-x-6 text-base font-semibold">
+    <!-- Desktop Navigation -->
+    <nav class="hidden lg:flex items-center space-x-6 text-base font-semibold">
       <a href="?page=home" class="hover:text-care-soft transition">Home</a>
       <a href="?page=about" class="hover:text-care-soft transition">About</a>
       <a href="?page=objectives" class="hover:text-care-soft transition">Objectives</a>
@@ -71,6 +73,31 @@ tailwind.config = {
       <a href="?page=events" class="hover:text-care-soft transition">Events</a>
     </nav>
 
+      <!-- Hamburger Button -->
+      <button id="menu-btn" class="lg:hidden text-white p-2" aria-label="Toggle menu" >
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav
+      id="mobile-menu"
+      class="hidden lg:hidden pt-3 pb-2 border-t border-white/20 mt-2"
+    >
+      <div class="flex flex-col space-y-3 text-sm font-semibold">
+        <a href="?page=home" class="hover:text-care-soft">Home</a>
+        <a href="?page=about" class="hover:text-care-soft">About</a>
+        <a href="?page=objectives" class="hover:text-care-soft">Objectives</a>
+        <a href="?page=wps" class="hover:text-care-soft">Work Packages</a>
+        <a href="?page=consortium" class="hover:text-care-soft">Consortium</a>
+        <a href="?page=contact" class="hover:text-care-soft">Contact</a>
+        <a href="?page=events" class="hover:text-care-soft">Events</a>
+      </div>
+    </nav>
+
   </div>
 </header>
 
@@ -78,7 +105,7 @@ tailwind.config = {
   <div id="main-content"></div>
 
     <!-- FUNDING DISCLAIMER -->
-    <section class="max-w-6xl mx-auto px-6 py-10 border-t pt-6 flex items-center gap-6 text-xs text-care-muted">
+    <section class="max-w-6xl mx-auto px-6 py-10 border-t pt-6 flex flex-col md:flex-row items-center gap-6 text-xs text-care-muted">
 
     <img
         src="logos/EN_Co-fundedbytheEU_RGB_POS.png"
@@ -103,6 +130,16 @@ tailwind.config = {
     </p>
 
     </section>
+
+  <!-- Menu script -->
+  <script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+  </script>
 
   <!-- Loader script -->
   <script>
