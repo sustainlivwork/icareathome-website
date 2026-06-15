@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>Care@Home</title>
+    <link rel="icon" type="image/x-icon" href="logos/our_logo.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        care: {
+          primary: "#17C188",
+          secondary: "#A78BFA",
+          accent: "#34D399",
+
+          // Backgrounds & surfaces
+            bg: "#EAF4FB",        // soft sky-tinted background (base)
+            soft: "#D6ECF8",      // section background (clearly darker than bg)
+            card: "#FFFFFF",      // pure white for real elevation contrast
+            elevated: "#F8FCFF",  // slightly tinted "floating" cards
+
+          // Text
+          text: "#1E293B",
+          heading: "#0F172A",
+          muted: "#94A3B8",
+          disabled: "#CBD5F5",
+
+          // UI elements
+          border: "#E2E8F0",
+          input: "#FFFFFF",
+          ring: "#A78BFA",
+
+          // States
+          success: "#22C55E",
+          warning: "#F59E0B",
+          error: "#EF4444",
+          info: "#38BDF8",
+        }
+      }
+    }
+  }
+}
+</script>
+</head>
+
+<body class="bg-care-bg text-care-text">
+
+<header class="sticky top-0 z-50 bg-gradient-to-r from-care-secondary to-care-primary text-white shadow-sm">
+  <div class="max-w-6xl mx-auto px-6 py-1 flex items-center justify-between">
+
+    <!-- Logo -->
+    <a href="index.html" class="flex items-center space-x-2 hover:opacity-90 transition">
+      <img src="logos/our_logo.svg" alt="Care@Home logo" class="w-12 h-12 rounded-md" />
+      <span class="font-semibold text-lg tracking-wide">
+        Care@Home
+      </span>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="hidden md:flex items-center space-x-6 text-base font-semibold">
+      <a href="?page=home" class="hover:text-care-soft transition">Home</a>
+      <a href="?page=about" class="hover:text-care-soft transition">About</a>
+      <a href="?page=objectives" class="hover:text-care-soft transition">Objectives</a>
+      <a href="?page=wps" class="hover:text-care-soft transition">Work Packages</a>
+      <a href="?page=consortium" class="hover:text-care-soft transition">Consortium</a>
+      <a href="?page=contact" class="hover:text-care-soft transition">Contact</a>
+      <a href="?page=events" class="hover:text-care-soft transition">Events</a>
+    </nav>
+
+  </div>
+</header>
+
+  <!-- Main content -->
+  <div id="main-content"></div>
+
+    <!-- FUNDING DISCLAIMER -->
+    <section class="max-w-6xl mx-auto px-6 py-10 border-t pt-6 flex items-center gap-6 text-xs text-care-muted">
+
+    <img
+        src="logos/EN_Co-fundedbytheEU_RGB_POS.png"
+        alt="Co-funded by the European Union"
+        class="h-[2.6rem] rounded-md shrink-0"
+    />
+
+    <img
+        src="logos/LMT-color-EN.png"
+        alt="Co-funded by the European Union"
+        class="h-[4.2rem] rounded-md shrink-0"
+    />
+
+    <img
+        src="logos/THCS_logo.png"
+        alt="Co-funded by the European Union"
+        class="h-[4rem] rounded-md shrink-0"
+    />
+
+    <p class="leading-relaxed">
+        This project received funding from Research Council of Lithuania (LMTLT), agreement No S-THCS-26-2 under the frame of Transforming Health and Care Systems, THCS, (GA N° 101095654 of the EU Horizon Europe Research and Innovation Programme)
+    </p>
+
+    </section>
+
+  <!-- Loader script -->
+  <script>
+    // Load page-specific content
+    const params = new URLSearchParams(window.location.search);
+    const page = params.get("page") || "home";
+
+    fetch(`pages/${page}.html`)
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("main-content").innerHTML = data;
+      })
+      .catch(() => {
+        document.getElementById("main-content").innerHTML =
+          "<div class='p-10 text-center'>Page not found</div>";
+      });
+  </script>
+
+</body>
+</html>
