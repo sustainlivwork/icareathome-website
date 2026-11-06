@@ -104,7 +104,7 @@ appear on the home page. Every event automatically gets its own page at
 
 6. **Publish** (see [Deployment](#deployment)).
 
-> 💡 To prepare an event before it should appear publicly, add `draft: true`. Drafts are visible
+> To prepare an event before it should appear publicly, add `draft: true`. Drafts are visible
 > with `npm run dev` (marked "Draft") but are left out of the published site.
 
 ### Edit or remove an event
