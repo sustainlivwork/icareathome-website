@@ -1,162 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-    <title>Care@Home</title>
-    <link rel="icon" type="image/x-icon" href="logos/our_logo.svg">
-    <script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        care: {
-          primary: "#17C188",
-          secondary: "#A78BFA",
-          accent: "#34D399",
-
-          // Backgrounds & surfaces
-            bg: "#EAF4FB",        // soft sky-tinted background (base)
-            soft: "#D6ECF8",      // section background (clearly darker than bg)
-            card: "#FFFFFF",      // pure white for real elevation contrast
-            elevated: "#F8FCFF",  // slightly tinted "floating" cards
-
-          // Text
-          text: "#1E293B",
-          heading: "#0F172A",
-          muted: "#94A3B8",
-          disabled: "#CBD5F5",
-
-          // UI elements
-          border: "#E2E8F0",
-          input: "#FFFFFF",
-          ring: "#A78BFA",
-
-          // States
-          success: "#22C55E",
-          warning: "#F59E0B",
-          error: "#EF4444",
-          info: "#38BDF8",
-        }
-      }
-    }
-  }
-}
-</script>
-</head>
-
-<body class="bg-care-bg text-care-text">
-
-<header class="sticky top-0 z-50 bg-gradient-to-r from-care-secondary to-care-primary text-white shadow-sm">
-  <div class="max-w-6xl mx-auto px-6 py-1">
-
-    <div class="flex items-center justify-between">
-
-    <!-- Logo -->
-    <a href="index.html" class="flex items-center space-x-2 hover:opacity-90 transition">
-      <img src="logos/our_logo.svg" alt="Care@Home logo" class="w-12 h-12 rounded-md drop-shadow-[0_6px_12px_rgba(0,0,0,0.8)]" />
-      <span class="font-semibold text-lg tracking-wide">
-        Care@Home
-      </span>
-    </a>
-
-    <!-- Desktop Navigation -->
-    <nav class="hidden lg:flex items-center space-x-6 text-base font-semibold">
-      <a href="?page=home" class="hover:text-care-soft transition">Home</a>
-      <a href="?page=about" class="hover:text-care-soft transition">About</a>
-      <a href="?page=objectives" class="hover:text-care-soft transition">Objectives</a>
-      <a href="?page=wps" class="hover:text-care-soft transition">Work Packages</a>
-      <a href="?page=consortium" class="hover:text-care-soft transition">Consortium</a>
-      <a href="?page=contact" class="hover:text-care-soft transition">Contact</a>
-      <a href="?page=events" class="hover:text-care-soft transition">Events</a>
-    </nav>
-
-      <!-- Hamburger Button -->
-      <button id="menu-btn" class="lg:hidden text-white p-2" aria-label="Toggle menu" >
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-
-    </div>
-
-    <!-- Mobile Menu -->
-    <nav
-      id="mobile-menu"
-      class="hidden lg:hidden pt-3 pb-2 border-t border-white/20 mt-2"
-    >
-      <div class="flex flex-col space-y-3 text-sm font-semibold">
-        <a href="?page=home" class="hover:text-care-soft">Home</a>
-        <a href="?page=about" class="hover:text-care-soft">About</a>
-        <a href="?page=objectives" class="hover:text-care-soft">Objectives</a>
-        <a href="?page=wps" class="hover:text-care-soft">Work Packages</a>
-        <a href="?page=consortium" class="hover:text-care-soft">Consortium</a>
-        <a href="?page=contact" class="hover:text-care-soft">Contact</a>
-        <a href="?page=events" class="hover:text-care-soft">Events</a>
-      </div>
-    </nav>
-
-  </div>
-</header>
-
-  <!-- Main content -->
-  <div id="main-content"></div>
-
-    <!-- FUNDING DISCLAIMER -->
-    <section class="max-w-6xl mx-auto px-6 py-10 border-t pt-6 flex flex-col md:flex-row items-center gap-6 text-xs text-care-muted">
-
-    <img
-        src="logos/EN_Co-fundedbytheEU_RGB_POS.png"
-        alt="Co-funded by the European Union"
-        class="h-[2.6rem] rounded-md shrink-0"
-    />
-
-    <img
-        src="logos/LMT-color-EN.png"
-        alt="Co-funded by the European Union"
-        class="h-[4.2rem] rounded-md shrink-0"
-    />
-
-    <img
-        src="logos/THCS_logo.png"
-        alt="Co-funded by the European Union"
-        class="h-[4rem] rounded-md shrink-0"
-    />
-
-    <p class="leading-relaxed">
-        This project received funding from Research Council of Lithuania (LMTLT), agreement No S-THCS-26-2 under the frame of Transforming Health and Care Systems, THCS, (GA N° 101095654 of the EU Horizon Europe Research and Innovation Programme)
-    </p>
-
-    </section>
-
-  <!-- Menu script -->
-  <script>
-  const menuBtn = document.getElementById('menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-
-  menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
-  </script>
-
-  <!-- Loader script -->
-  <script>
-    // Load page-specific content
-    const params = new URLSearchParams(window.location.search);
-    const page = params.get("page") || "home";
-
-    fetch(`pages/${page}.html`)
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("main-content").innerHTML = data;
-      })
-      .catch(() => {
-        document.getElementById("main-content").innerHTML =
-          "<div class='p-10 text-center'>Page not found</div>";
-      });
-  </script>
-
-</body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--app-head-start-->
+    <title>Care@Home | AI that Cares for Aging at Home</title>
+    <meta name="description" content="Developing a cutting-edge AI-based contactless monitoring ecosystem that supports independent living, reduces healthcare workload, and improves quality of life for older adults." />
+    <!--app-head-end-->
+    <meta name="theme-color" content="#0B285F" />
+    <link rel="icon" type="image/png" sizes="64x64" href="%BASE_URL%images/branding/favicon.png" />
+    <link rel="apple-touch-icon" href="%BASE_URL%images/branding/apple-touch-icon.png" />
+    <script>
+      // Legacy URLs (index.html?page=contact, ?page=wps, …) from the previous website
+      // are redirected to the new page addresses so old bookmarks and links keep working.
+      (function () {
+        try {
+          var base = '%BASE_URL%';
+          var params = new URLSearchParams(window.location.search);
+          if (!params.has('page')) return;
+          var path = window.location.pathname;
+          if (path !== base && path !== base + 'index.html') return;
+          var pages = {
+            '': '', home: '', about: 'about/', objectives: 'objectives/', wps: 'work-packages/',
+            consortium: 'consortium/', contact: 'contact/', events: 'events/'
+          };
+          var page = params.get('page');
+          var target = Object.prototype.hasOwnProperty.call(pages, page) ? pages[page] : '404.html';
+          window.location.replace(base + target + window.location.hash);
+        } catch (e) {}
+      })();
+    </script>
+    <noscript>
+      <style>[data-reveal]{opacity:1!important;transform:none!important}</style>
+    </noscript>
+  </head>
+  <body>
+    <div id="root"><!--app-html--></div>
+    <script type="module" src="/src/entry-client.jsx"></script>
+  </body>
 </html>

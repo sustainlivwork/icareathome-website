@@ -1,0 +1,12 @@
+{
+  "hero": {
+    "title": "Contact",
+    "intro": "For inquiries, collaboration opportunities, or more information about the Care@Home project, please get in touch with our team."
+  },
+  "coordinator": {
+    "heading": "Coordinating Institution",
+    "name": "Kaunas University of Technology (KTU)",
+    "partner": "ktu",
+    "text": "The Care@Home project is coordinated by KTU, leading research and innovation in AI, healthcare technologies, and digital solutions for independent living."
+  }
+}

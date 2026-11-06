@@ -1,0 +1,45 @@
+{
+  "hero": {
+    "title": "Project Objectives",
+    "intro": "Care@Home aims to develop a comprehensive, AI-driven ecosystem for contactless monitoring, enabling safer and more independent living for older adults."
+  },
+  "groups": [
+    {
+      "id": "monitoring",
+      "icon": "scan-heart",
+      "heading": "Monitoring",
+      "objectives": [
+        "Identify the most relevant daily activities, physical states, and environmental factors that reflect the health status and independence level of older adults.",
+        "Define clinically relevant vital signs suitable for continuous, contactless monitoring."
+      ]
+    },
+    {
+      "id": "technology",
+      "icon": "cpu",
+      "heading": "Technology",
+      "objectives": [
+        "Develop an AI-powered home care system that detects assistance needs and monitors autonomy in daily routines using Nearable & Airable Smart Sensors (NASS).",
+        "Design and implement advanced AI algorithms and predictive models for early detection of health risks and behavioral changes."
+      ]
+    },
+    {
+      "id": "ethics-privacy",
+      "icon": "shield-check",
+      "heading": "Ethics & Privacy",
+      "objectives": [
+        "Build a responsible framework for sensitive data monitoring that prioritizes user trust, privacy, and ethical AI principles.",
+        "Implement secure local data processing and privacy-preserving techniques to transform sensitive data into non-sensitive representations."
+      ]
+    },
+    {
+      "id": "validation",
+      "icon": "badge-check",
+      "heading": "Validation",
+      "objectives": [
+        "Evaluate system performance and adaptability across diverse populations of older adults with varying health conditions and living environments.",
+        "Ensure high accuracy, usability, and acceptance of the system through real-world testing and user-centered validation."
+      ]
+    }
+  ],
+  "summary": "Together, these objectives form the foundation for a scalable, ethical, and impactful AI solution that supports independent living and strengthens healthcare systems across Europe."
+}

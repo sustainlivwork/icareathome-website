@@ -1,0 +1,42 @@
+{
+  "name": "Care@Home",
+  "tagline": "AI that Cares for Aging at Home",
+  "url": "https://icareathome.eu",
+  "description": "Developing a cutting-edge AI-based contactless monitoring ecosystem that supports independent living, reduces healthcare workload, and improves quality of life for older adults.",
+  "logo": {
+    "symbol": "/images/branding/care-at-home-symbol.png",
+    "symbolWidth": 196,
+    "symbolHeight": 158,
+    "horizontal": "",
+    "alt": "Care@Home logo"
+  },
+  "navigation": [
+    { "label": "Home", "path": "/" },
+    { "label": "About", "path": "/about/" },
+    { "label": "Objectives", "path": "/objectives/" },
+    { "label": "Work Packages", "path": "/work-packages/" },
+    { "label": "Consortium", "path": "/consortium/" },
+    { "label": "Contact", "path": "/contact/" },
+    { "label": "Events", "path": "/events/" }
+  ],
+  "funding": {
+    "statement": "This project received funding from Research Council of Lithuania (LMTLT), agreement No S-THCS-26-2 under the frame of Transforming Health and Care Systems, THCS, (GA N° 101095654 of the EU Horizon Europe Research and Innovation Programme)",
+    "logos": [
+      {
+        "src": "/images/funding/EN_Co-fundedbytheEU_RGB_POS.png",
+        "alt": "Co-funded by the European Union",
+        "height": 42
+      },
+      {
+        "src": "/images/funding/LMT-color-EN.png",
+        "alt": "Research Council of Lithuania (LMTLT)",
+        "height": 66
+      },
+      {
+        "src": "/images/funding/THCS_logo.png",
+        "alt": "Transforming Health and Care Systems (THCS)",
+        "height": 64
+      }
+    ]
+  }
+}

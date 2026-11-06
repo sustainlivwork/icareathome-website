@@ -1,0 +1,12 @@
+{
+  "hero": {
+    "title": "Consortium",
+    "intro": "Care@Home brings together 9 partners from 7 European countries, combining expertise in healthcare, artificial intelligence, and research."
+  },
+  "summary": [
+    { "value": "9", "label": "Partners" },
+    { "value": "7", "label": "Countries" },
+    { "value": "1", "label": "Coordinator" }
+  ],
+  "partnersHeading": "Project Partners"
+}
