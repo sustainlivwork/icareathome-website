@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "title": "Care@Home",
+    "tagline": "AI that Cares for Aging at Home",
+    "description": "Developing a cutting-edge AI-based contactless monitoring ecosystem that supports independent living, reduces healthcare workload, and improves quality of life for older adults.",
+    "image": {
+      "src": "/images/homepage/main_pic.png",
+      "alt": "An older woman reading a book in an armchair at home, with a small sensor on the wall",
+      "position": "75% center"
+    }
+  },
+  "vision": {
+    "heading": "Project Vision",
+    "items": [
+      { "icon": "radar", "title": "Contactless Monitoring", "text": "Non-invasive continuous observation" },
+      { "icon": "activity", "title": "Early Risk Detection", "text": "Identify health issues early" },
+      { "icon": "hand-heart", "title": "Support Caregivers", "text": "Reduce workload & improve response" },
+      { "icon": "house", "title": "Independent Living", "text": "Enable aging at home safely" }
+    ]
+  },
+  "whyItMatters": {
+    "heading": "Why Care@Home Matters",
+    "stats": [
+      { "value": "30%", "label": "EU population aged 65+ by 2050" },
+      { "value": "32.1%", "label": "Older adults living alone" },
+      { "value": "4.1M", "label": "Projected healthcare worker shortage" }
+    ]
+  },
+  "overview": {
+    "heading": "Project Overview",
+    "text": "Care@Home develops an AI-powered ecosystem combining **IoT sensors**, **TinyML**, and **privacy-preserving data processing** to monitor **daily activities**, **vital signs**, and **environmental factors** in real time. The system enables early intervention, supports caregivers, and enhances independent living."
+  },
+  "consortium": {
+    "heading": "Consortium",
+    "items": [
+      { "title": "9 Partners", "text": "Universities, clinical partners, SME" },
+      { "title": "7 Countries", "text": "Across Europe" },
+      { "title": "Coordinator", "text": "Kaunas University of Technology" }
+    ]
+  }
+}

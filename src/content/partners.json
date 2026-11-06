@@ -1,0 +1,84 @@
+[
+  {
+    "id": "ktu",
+    "name": "Kaunas University of Technology",
+    "country": "Lithuania",
+    "role": "Coordinator",
+    "coordinator": true,
+    "logo": "/images/consortium/KTU_logotype_RGB_with_text_BLACK.svg",
+    "logoScale": 1,
+    "url": ""
+  },
+  {
+    "id": "lsmu",
+    "name": "Lithuanian University of Health Sciences",
+    "country": "Lithuania",
+    "role": "Clinical Partner",
+    "logo": "/images/consortium/LSMU_MAIN_black.png",
+    "logoScale": 1.25,
+    "url": ""
+  },
+  {
+    "id": "taltech",
+    "name": "Tallinn University of Technology",
+    "country": "Estonia",
+    "role": "Research Partner",
+    "logo": "/images/consortium/Logo_veeb_esitlus_png.png",
+    "logoScale": 1.5,
+    "url": ""
+  },
+  {
+    "id": "rsu",
+    "name": "Riga Stradins University",
+    "country": "Latvia",
+    "role": "Research Partner",
+    "logo": "/images/consortium/RSU_logo_DIGITAL_gaiss_en.svg",
+    "logoScale": 1.55,
+    "url": ""
+  },
+  {
+    "id": "tau",
+    "name": "Tampere University",
+    "country": "Finland",
+    "role": "Technology Lead",
+    "logo": "/images/consortium/Tampere_University_logo.svg",
+    "logoScale": 1.1,
+    "url": ""
+  },
+  {
+    "id": "uj",
+    "name": "Jagiellonian University",
+    "country": "Poland",
+    "role": "Evaluation Lead",
+    "logo": "/images/consortium/Jagiellonian_University.svg",
+    "logoScale": 1,
+    "url": ""
+  },
+  {
+    "id": "uc",
+    "name": "University of Cantabria",
+    "country": "Spain",
+    "role": "Medical Research Partner",
+    "logo": "/images/consortium/logoUC.jpg",
+    "logoScale": 1,
+    "url": ""
+  },
+  {
+    "id": "liu",
+    "name": "Linköping University",
+    "country": "Sweden",
+    "role": "AI & Systems Validation",
+    "logo": "/images/consortium/LiU_primary_black.png",
+    "logoScale": 1.12,
+    "url": ""
+  },
+  {
+    "id": "addere",
+    "name": "Addere Care Nursing Home",
+    "country": "Lithuania",
+    "role": "SME / Pilot Site",
+    "logo": "/images/consortium/addere-care-logo-small.png",
+    "logoScale": 1,
+    "url": ""
+  }
+]

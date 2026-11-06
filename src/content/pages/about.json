@@ -1,0 +1,64 @@
+{
+  "hero": {
+    "title": "About the Project",
+    "intro": "Understanding the need, purpose, and impact of Care@Home."
+  },
+  "sections": [
+    {
+      "id": "background",
+      "heading": "Background & Need",
+      "paragraphs": [
+        "Europe is experiencing a rapid demographic shift. The population aged 65 and over is growing significantly and is expected to reach nearly 30% by 2050. At the same time, a large proportion of older adults live alone, increasing the risk of social isolation and delayed medical response.",
+        "Healthcare systems are under increasing pressure, with a projected shortage of millions of healthcare professionals in the coming years. Traditional care models are becoming difficult to sustain, especially for continuous monitoring and support at home."
+      ]
+    },
+    {
+      "id": "problem",
+      "heading": "The Problem",
+      "paragraphs": [
+        "Existing monitoring solutions, such as wearables, often fail in real-life scenarios due to usability issues, limited adoption, and lack of scalability. Many systems are intrusive, require active user engagement, or do not integrate well into everyday life.",
+        "As a result, early signs of health deterioration frequently go unnoticed, leading to preventable hospitalizations and reduced quality of life for older adults."
+      ]
+    },
+    {
+      "id": "goal",
+      "heading": "Project Goal",
+      "paragraphs": [
+        "Care@Home aims to develop a cutting-edge AI-based, contactless monitoring ecosystem that enables continuous, non-invasive observation of individuals in their home environments.",
+        "The system integrates IoT sensors, TinyML, and privacy-preserving technologies to detect assistance needs, monitor daily activities, and track vital signs without disrupting everyday life."
+      ]
+    }
+  ],
+  "vision": {
+    "id": "vision",
+    "heading": "Vision",
+    "quote": "“Invisible care and real impact.”",
+    "text": "Care@Home envisions a future where AI supports independent living by working seamlessly in the background, empowering older adults, supporting caregivers, and enabling timely, data-driven interventions without compromising privacy or dignity."
+  },
+  "impact": {
+    "id": "impact",
+    "heading": "Expected Impact",
+    "items": [
+      {
+        "icon": "user-round",
+        "title": "For Older Adults",
+        "text": "Improved safety, independence, and quality of life through continuous, unobtrusive monitoring."
+      },
+      {
+        "icon": "users-round",
+        "title": "For Caregivers & Families",
+        "text": "Peace of mind and reduced burden through real-time insights and early alerts."
+      },
+      {
+        "icon": "hospital",
+        "title": "For Healthcare Systems",
+        "text": "Reduced workload and costs by enabling preventive care and minimizing unnecessary hospitalizations."
+      },
+      {
+        "icon": "globe",
+        "title": "For Society",
+        "text": "Scalable, ethical AI solutions that address demographic challenges and support sustainable healthcare systems."
+      }
+    ]
+  }
+}

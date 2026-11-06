@@ -1,0 +1,243 @@
+@import '@fontsource-variable/inter/wght.css';
+@import '@fontsource-variable/plus-jakarta-sans/wght.css';
+@import 'tailwindcss';
+
+/* ── Design tokens ────────────────────────────────────────────────────────────
+   Brand colours come from the original website (purple #A78BFA → green #17C188)
+   with blue and teal steps in between. The bright brand colours are used for
+   gradients and decoration; the darker "-text" variants are for readable text
+   (all ≥ 4.5:1 contrast on white). */
+@theme {
+  --color-brand-purple: #a78bfa;
+  --color-brand-blue: #4f7cff;
+  --color-brand-teal: #24b7c5;
+  --color-brand-green: #17c188;
+
+  --color-purple-text: #6a4bd4;
+  --color-blue-text: #2f57d9;
+  --color-teal-text: #0b7a86;
+  --color-green-text: #0a7f5a;
+
+  --color-navy-950: #061738;
+  --color-navy-900: #0b285f;
+  --color-navy-800: #163a7a;
+  --color-ink: #1e293b;
+  --color-ink-muted: #4a5b73;
+  --color-ink-subtle: #5b6a80;
+
+  --color-surface: #ffffff;
+  --color-mist: #f4f9fd;
+  --color-tint: #eaf4fb;
+  --color-tint-strong: #d6ecf8;
+  --color-line: #dde7f1;
+  --color-line-strong: #c5d5e6;
+
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Plus Jakarta Sans Variable', 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+
+  --shadow-soft: 0 1px 2px rgb(11 40 95 / 0.03), 0 6px 18px -10px rgb(11 40 95 / 0.1);
+  --shadow-lift: 0 2px 4px rgb(11 40 95 / 0.03), 0 16px 36px -18px rgb(11 40 95 / 0.18);
+  --shadow-glow: 0 18px 50px -24px rgb(79 124 255 / 0.4);
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --animate-fade-up: fade-up 0.7s var(--ease-out-soft) both;
+  --animate-fade-in: fade-in 0.35s ease-out both;
+  --animate-settle: settle 1.6s var(--ease-out-soft) both;
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  /* Hero photo settles gently into place once. */
+  @keyframes settle {
+    from { transform: scale(1.045); }
+    to { transform: none; }
+  }
+}
+
+:root {
+  --gradient-brand: linear-gradient(100deg, #a78bfa 0%, #4f7cff 36%, #24b7c5 68%, #17c188 100%);
+  /* Same hues in darker tones, for text and filled shapes on light backgrounds (≥ 4.5:1 with white). */
+  --gradient-brand-deep: linear-gradient(100deg, #6a4bd4 0%, #2f57d9 36%, #0b7a86 68%, #0a7f5a 100%);
+  --gradient-brand-soft: linear-gradient(120deg, rgb(167 139 250 / 0.16), rgb(79 124 255 / 0.12) 40%, rgb(36 183 197 / 0.12) 70%, rgb(23 193 136 / 0.14));
+}
+
+/* ── Base ─────────────────────────────────────────────────────────────────── */
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 6rem;
+  }
+  body {
+    @apply bg-surface font-sans text-ink antialiased;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+  h1, h2, h3, h4 {
+    @apply font-display text-navy-900;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+  p { text-wrap: pretty; }
+  ::selection { background: rgb(79 124 255 / 0.18); }
+
+  :focus-visible {
+    outline: 3px solid var(--color-blue-text);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  main:focus { outline: none; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+  }
+}
+
+/* ── Type scale ───────────────────────────────────────────────────────────────
+   One set of text sizes for the whole site — use these instead of ad-hoc sizes:
+   type-title (page titles, h1) · type-heading (section headings, h2)
+   · type-subheading (card / item titles, names) · type-lead (intros, first paragraphs)
+   · type-body (ordinary text) · type-small (dates, roles, labels).
+   Sizes grow smoothly between phone and desktop. */
+@utility type-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.375rem, 1.6rem + 2.4vw, 3.5rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+@utility type-heading {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.875rem, 1.45rem + 1.3vw, 2.625rem);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+@utility type-subheading {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.1875rem, 1.1rem + 0.25vw, 1.3125rem);
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+}
+@utility type-lead {
+  font-size: clamp(1.125rem, 1.04rem + 0.3vw, 1.25rem);
+  line-height: 1.65;
+}
+@utility type-body {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+@utility type-small {
+  font-size: 0.9375rem;
+  line-height: 1.55;
+}
+
+/* ── Utilities ────────────────────────────────────────────────────────────── */
+@utility bg-brand-gradient {
+  background-image: var(--gradient-brand);
+}
+@utility bg-brand-gradient-soft {
+  background-image: var(--gradient-brand-soft);
+}
+@utility bg-brand-gradient-deep {
+  background-image: var(--gradient-brand-deep);
+}
+/* Very light brand-tinted background for feature sections and panels. */
+@utility bg-wash {
+  background-color: #f6f8fe;
+  background-image:
+    radial-gradient(55% 75% at 0% 0%, rgb(167 139 250 / 0.13), transparent 70%),
+    radial-gradient(55% 75% at 100% 100%, rgb(23 193 136 / 0.11), transparent 70%),
+    linear-gradient(120deg, #f8f7ff 0%, #f2f6ff 45%, #effaf8 100%);
+}
+@utility text-gradient-deep {
+  background-image: var(--gradient-brand-deep);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+@utility container-page {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  @media (width >= 40rem) { padding-inline: 2rem; }
+  @media (width >= 64rem) { padding-inline: 2.5rem; }
+}
+@utility eyebrow {
+  @apply font-display text-[0.8125rem] font-bold tracking-[0.14em] uppercase;
+}
+@utility dot-grid {
+  background-image: radial-gradient(rgb(11 40 95 / 0.09) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* Thin gradient border on a rounded element (keeps the inner background). */
+@utility gradient-border {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 1.5px;
+    border-radius: inherit;
+    background: var(--gradient-brand);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+}
+
+/* ── Long-form text (event reports) ───────────────────────────────────────── */
+@layer components {
+  /* Same type scale as the rest of the site: body text, subheading-size h2, bold body-size h3. */
+  .prose-care {
+    @apply type-body text-ink;
+    line-height: 1.75;
+  }
+  .prose-care > * + * { margin-top: 1.25em; }
+  .prose-care h2 { @apply mt-12 type-subheading; }
+  .prose-care h3 { @apply mt-10 type-body font-display font-bold; }
+  .prose-care h4, .prose-care h5, .prose-care h6 { @apply mt-8 type-body font-semibold; }
+  .prose-care h2 + *, .prose-care h3 + *, .prose-care h4 + * { margin-top: 0.75em; }
+  .prose-care a {
+    @apply font-medium text-blue-text underline decoration-brand-blue/40 decoration-2 underline-offset-4 transition-colors;
+  }
+  .prose-care a:hover { @apply decoration-blue-text; }
+  .prose-care strong { @apply font-semibold text-navy-900; }
+  .prose-care ul, .prose-care ol { padding-left: 1.4em; }
+  .prose-care ul { list-style: disc; }
+  .prose-care ol { list-style: decimal; }
+  .prose-care li { margin-top: 0.5em; padding-left: 0.25em; }
+  .prose-care li::marker { color: var(--color-brand-teal); }
+  .prose-care blockquote {
+    @apply border-l-4 border-brand-purple/60 bg-mist py-3 pr-4 pl-6 text-navy-900 italic;
+    border-radius: 0 0.75rem 0.75rem 0;
+  }
+  .prose-care img { @apply my-8 h-auto w-full rounded-2xl; }
+  .prose-care hr { @apply my-12 border-line; }
+  .prose-care table { @apply w-full text-left text-base; border-collapse: collapse; }
+  .prose-care th, .prose-care td { @apply border-b border-line px-3 py-2; }
+  .prose-care th { @apply font-semibold text-navy-900; }
+  .prose-care code { @apply rounded bg-tint px-1.5 py-0.5 text-[0.9em]; }
+}
+
+/* ── Motion preferences ───────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

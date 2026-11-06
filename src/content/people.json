@@ -1,0 +1,28 @@
+[
+  {
+    "id": "kristina-sutiene",
+    "name": "Kristina Šutienė",
+    "role": "Project Contact Person",
+    "institution": "Kaunas University of Technology",
+    "email": "kristina.sutiene@ktu.lt",
+    "phone": "",
+    "note": "Available via Microsoft Teams",
+    "photo": "/images/people/kristina-sutiene.jpg",
+    "photoPosition": "",
+    "profileUrl": "",
+    "bio": "Full Professor and Chief Researcher at KTU. Her research interests focus on applied mathematics, data science, and artificial intelligence, and she is open to academic and interdisciplinary collaboration in these areas."
+  },
+  {
+    "id": "agne-paulauskaite",
+    "name": "Agnė Paulauskaitė",
+    "role": "Project Contact Person",
+    "institution": "Kaunas University of Technology",
+    "email": "agne.paulauskaite@ktu.lt",
+    "phone": "",
+    "note": "Available via Microsoft Teams",
+    "photo": "/images/people/agne-paulauskaite.jpg",
+    "photoPosition": "",
+    "profileUrl": "",
+    "bio": "Head of the KTU Artificial Intelligence Excellence Centre and Professor at the KTU Faculty of Informatics. She is currently actively involved in highlighting the importance of artificial intelligence in business, curricula, public education programs, and social media."
+  }
+]

@@ -1,0 +1,97 @@
+{
+  "hero": {
+    "title": "Project Structure",
+    "intro": "Care@Home is structured into six interconnected Work Packages (WPs), covering monitoring, technology development, AI, validation, and project management."
+  },
+  "timeline": {
+    "heading": "Timeline Overview",
+    "text": "Duration: 36 months (M1–M36)",
+    "startLabel": "M1",
+    "endLabel": "M36"
+  },
+  "packagesHeading": "Work Packages",
+  "packages": [
+    {
+      "id": "wp1",
+      "code": "WP1",
+      "icon": "list-checks",
+      "title": "Identification of Critical Monitoring Parameters",
+      "lead": "Lithuanian University of Health Sciences",
+      "leadPartner": "lsmu",
+      "description": "Define key physical activities, vital signs, daily routines (ADLs), and environmental factors that reflect health and independence."
+    },
+    {
+      "id": "wp2",
+      "code": "WP2",
+      "icon": "radio",
+      "title": "Contactless IoT System Development",
+      "lead": "Tampere University",
+      "leadPartner": "tau",
+      "description": "Develop a non-invasive IoT infrastructure using Nearable & Airable Smart Sensors (NASS) for continuous data collection."
+    },
+    {
+      "id": "wp3",
+      "code": "WP3",
+      "icon": "cpu",
+      "title": "Localized Sensitive Data Processing (TinyML)",
+      "lead": "Tallinn University of Technology",
+      "leadPartner": "taltech",
+      "description": "Develop privacy-preserving AI models using TinyML for real-time, local data processing on edge devices."
+    },
+    {
+      "id": "wp4",
+      "code": "WP4",
+      "icon": "network",
+      "title": "AI-Based Monitoring Ecosystem",
+      "lead": "Kaunas University of Technology",
+      "leadPartner": "ktu",
+      "description": "Integrate system components into a complete AI-powered monitoring ecosystem and validate performance under controlled conditions."
+    },
+    {
+      "id": "wp5",
+      "code": "WP5",
+      "icon": "clipboard-check",
+      "title": "System Evaluation & Validation",
+      "lead": "Jagiellonian University",
+      "leadPartner": "uj",
+      "description": "Evaluate system performance across diverse populations, including nursing homes and private households in multiple countries."
+    },
+    {
+      "id": "wp6",
+      "code": "WP6",
+      "icon": "messages-square",
+      "title": "Project Management & Communication",
+      "lead": "Kaunas University of Technology",
+      "leadPartner": "ktu",
+      "description": "Ensure coordination, quality assurance, ethical compliance, and dissemination of project results across stakeholders."
+    }
+  ],
+  "connections": {
+    "heading": "How It All Connects",
+    "steps": [
+      {
+        "label": "WP1 → WP2",
+        "packages": ["wp1", "wp2"],
+        "text": "Define what to monitor → build sensing infrastructure"
+      },
+      {
+        "label": "WP2 → WP3 → WP4",
+        "packages": ["wp2", "wp3", "wp4"],
+        "text": "Collect data → process locally → integrate into full system"
+      },
+      {
+        "label": "WP4 → WP5",
+        "packages": ["wp4", "wp5"],
+        "text": "Deploy system → evaluate in real-world environments"
+      }
+    ]
+  },
+  "outcomes": {
+    "heading": "Expected Outcomes",
+    "items": [
+      { "icon": "brain-circuit", "title": "AI Monitoring System", "text": "Fully functional, privacy-preserving ecosystem" },
+      { "icon": "router", "title": "IoT Sensor Network", "text": "Contactless and energy-efficient monitoring" },
+      { "icon": "badge-check", "title": "Validated Solution", "text": "Tested across real users and environments" }
+    ]
+  }
+}
