@@ -7,7 +7,7 @@ tags:
  - "Training"
 draft: false          # remove this line when the event is ready to publish
 
-coverImage: "/images/events/2026/2026-11-care-home-at-thcs-training-in-bilbao-from-research-to-engage/foto1.jpg"
+coverImage: "/images/events/2026/2026-11-care-home-at-thcs-training-in-bilbao-from-research-to-engage/foto1.png"
 coverAlt: "Three Care@Home representatives at a project meeting in Spain"
 galleryFolder: "/images/events/2026/2026-11-care-home-at-thcs-training-in-bilbao-from-research-to-engage/"
 ---
