@@ -4,9 +4,9 @@
   "url": "https://icareathome.eu",
   "description": "Developing a cutting-edge AI-based contactless monitoring ecosystem that supports independent living, reduces healthcare workload, and improves quality of life for older adults.",
   "logo": {
-    "symbol": "/images/branding/care-at-home-symbol.png",
-    "symbolWidth": 196,
-    "symbolHeight": 158,
+    "symbol": "/images/branding/care-at-home-logo.png",
+    "symbolWidth": 127,
+    "symbolHeight": 180,
     "horizontal": "",
     "alt": "Care@Home logo"
   },
